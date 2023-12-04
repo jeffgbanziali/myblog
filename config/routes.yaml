@@ -1,0 +1,45 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+
+home:
+    path: /home
+    # the controller value has the format 'controller_class::method_name'
+    controller: App\Controller\HomeController::indexAction
+
+accueil:
+    path: /
+    # the controller value has the format 'controller_class::method_name'
+    controller: App\Controller\ContactController::accueil
+
+goodBye:
+    path: /goodBye
+    # the controller value has the format 'controller_class::method_name'
+    controller: App\Controller\Salutation::actionId
+
+
+contact: 
+    path: /contact
+    controller: App\Controller\ContactController::viewAction
+
+article: 
+    path: /article
+    controller: App\Controller\ArticleController::viewAction
+
+url:
+   path: /url
+   controller: App\Controller\ContactController::redirection
+
+modify:
+   path: /contact/modify/{id}
+   controller: App\Controller\ContactController::modifyAction
+
+delete:
+    path: '/contact/delete/{id}'
+    controller: 'App\Controller\ContactController::deleteAction'
+    requirements:
+        id: '\d+'
+   
